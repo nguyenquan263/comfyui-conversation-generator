@@ -1,0 +1,45 @@
+# --- third-party code: ComfyUI itself and its custom nodes are installed, not vendored ---
+# (ComfyUI 0.41.0 from https://github.com/comfyanonymous/ComfyUI, plus custom_nodes/ComfyUI-GGUF)
+ComfyUI/
+
+# --- model weights (tens of GB; fetched with ./setup_models.py) ---
+*.safetensors
+*.gguf
+*.ckpt
+*.pt
+*.pth
+*.bin
+*.part
+
+# --- runtime state ---
+logs/
+jobs/
+venv/
+.venv/
+*.pid
+
+# --- generated media ---
+*.mp4
+*.webm
+*.mkv
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.flac
+*.wav
+
+# --- python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# --- editors / OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

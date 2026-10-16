@@ -1,0 +1,18 @@
+# Python 3.12 environment for /mnt/d/ComfyUI_Stuff (api.py, cartoon.py, pipelines.py, setup_models.py)
+#
+# Create and install (uv, no sudo needed):
+#   uv venv --python 3.12 ~/.venvs/comfyui
+#   uv pip install --python ~/.venvs/comfyui/bin/python -r requirements.txt
+#
+# torch comes from PyPI with CUDA bundled (2.14.1+cu130 here); it needs an NVIDIA driver >= 580.
+
+# ComfyUI itself (torch, torchvision, av, safetensors, transformers, comfy-kitchen, ...)
+-r ComfyUI/requirements.txt
+
+# ComfyUI-GGUF custom node (LTX 2.5 transformer is a GGUF file)
+-r ComfyUI/custom_nodes/ComfyUI-GGUF/requirements.txt
+
+# The video API
+fastapi==0.143.2
+uvicorn[standard]==0.54.0
+pydantic==2.14.1
